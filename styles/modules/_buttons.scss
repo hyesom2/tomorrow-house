@@ -1,0 +1,88 @@
+%button-base {
+  @include inline-flexbox;
+  padding: 0 8px;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+
+  &.disabled {
+    opacity: 0.4;
+  }
+}
+
+.button-fill-primary {
+  @extend %button-base;
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue-dark;
+  }
+
+  &.disabled:hover {
+    background-color: $blue;
+  }
+}
+
+.button-fill-secondary {
+  @extend %button-base;
+  color: $primary;
+  background-color: $border;
+
+  &:hover {
+    background-color: $tertiary;
+  }
+
+  &.disabled:hover {
+    background-color: $border;
+  }
+}
+
+.button-outlined {
+  @extend %button-base;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+
+  &:hover {
+    background-color: $blue-light;
+  }
+
+  &.disabled:hover {
+    background-color: $white;
+  }
+}
+
+.button-ghost {
+  @extend %button-base;
+  color: $primary;
+  background-color: transparent;
+
+  &:hover {
+    color: $secondary;
+  }
+
+  &.disabled:hover {
+    color: $primary;
+  }
+}
+
+.button-55 {
+  @include text-style(18);
+  height: 55px;
+}
+
+.button-48 {
+  @include text-style(16);
+  height: 48px;
+}
+
+.button-40 {
+  @include text-style(16);
+  height: 40px;
+}
+
+.button-32 {
+  @include text-style(14);
+  height: 32px;
+}
