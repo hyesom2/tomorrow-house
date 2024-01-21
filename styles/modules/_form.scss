@@ -1,0 +1,73 @@
+%form-base {
+  @include text-style(16, $primary);
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  font-weight: 400;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  appearance: none; // select의 화살표 사라지게
+
+  &::placeholder {
+    color: $tertiary;
+  }
+
+  &:hover {
+    background-color: $background;
+  }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+.select-group {
+  @include flexbox(start);
+  position: relative;
+
+  &.is-active {
+    .form-select {
+      border-color: $blue;
+    }
+
+    i {
+      color: $blue;
+    }
+  }
+
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis; // 글씨가 넘쳤을 때 ... 으로
+  }
+
+  i {
+    @include position-center-y;
+    @include text-style(24, $tertiary);
+    right: 8px;
+    pointer-events: none; // 클릭할 수 없는 것과 관계가 없는 것
+  }
+}
+
+.input-group {
+  @include flexbox(start);
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  i {
+    @include position-center-y;
+    left: 10px;
+    font-size: 20px;
+    color: $secondary;
+  }
+}
