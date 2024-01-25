@@ -1,0 +1,71 @@
+%pagination-base {
+  @include inline-flexbox;
+  @include text-style(16, $primary);
+  height: 26px;
+  font-weight: 700;
+  background-color: $white;
+  border-radius: 4px;
+}
+
+.pagination {
+  @include flexbox;
+
+  .page-control {
+    @extend %pagination-base;
+    width: 26px;
+    border: 1px solid $border;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    .ic-chevron {
+      font-size: 20px;
+    }
+
+    &.page-prev {
+      margin-right: 24px;
+      transform: rotate(90deg);
+    }
+
+    &.page-next {
+      margin-left: 24px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .page-list {
+    @include flexbox;
+  }
+
+  .page-item {
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-active {
+      a,
+      button {
+        color: $white;
+        background-color: $blue;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    a,
+    button {
+      min-width: 26px;
+      padding: 0 4px;
+      @extend %pagination-base;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
