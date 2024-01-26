@@ -12,4 +12,12 @@
   &.gnb-search-button {
     margin-right: 4px;
   }
+
+  @include responsive(md) {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

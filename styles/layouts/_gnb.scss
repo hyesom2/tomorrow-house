@@ -1,14 +1,16 @@
-$sm-gnb-height: 50px;
+$gnb-height-sm: 50px;
+$gnb-height-md: 80px;
 
 .gnb {
   @include flexbox;
   position: relative;
+  height: 100%;
   background-color: $white;
   border-bottom: 1px solid $border;
 
   &-wrapper {
     @include flexbox(between);
-    height: $sm-gnb-height - 1px;
+    height: $gnb-height-sm - 1px;
   }
 
   &-left {
@@ -16,7 +18,7 @@ $sm-gnb-height: 50px;
   }
 
   &-right {
-    @include flexbox;
+    @include flexbox(end);
 
     .button-group {
       @include flexbox(end);
@@ -34,6 +36,47 @@ $sm-gnb-height: 50px;
       display: block;
       width: auto;
       height: 20px;
+    }
+  }
+
+  @include responsive(md) {
+    &-wrapper {
+      height: $gnb-height-md - 1px;
+    }
+
+    .logo {
+      position: static;
+      margin-right: 32px;
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    &-right {
+      .button-group {
+        margin-right: 24px;
+      }
+
+      .button-fill-primary {
+        width: 88px;
+
+        i {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  @include responsive(lg) {
+    &-search {
+      width: 264px;
+      margin-right: 24px;
+
+      .input-group {
+        width: 100%;
+      }
     }
   }
 }
