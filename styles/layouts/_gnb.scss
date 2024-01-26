@@ -1,0 +1,39 @@
+$sm-gnb-height: 50px;
+
+.gnb {
+  @include flexbox;
+  position: relative;
+  background-color: $white;
+  border-bottom: 1px solid $border;
+
+  &-wrapper {
+    @include flexbox(between);
+    height: $sm-gnb-height - 1px;
+  }
+
+  &-left {
+    @include flexbox(start);
+  }
+
+  &-right {
+    @include flexbox;
+
+    .button-group {
+      @include flexbox(end);
+    }
+  }
+
+  .logo {
+    @include position-center;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+}
