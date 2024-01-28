@@ -66,6 +66,24 @@ $gnb-height-md: 80px;
           margin-left: 4px;
         }
       }
+
+      .gnb-auth {
+        margin-left: 8px;
+
+        a {
+          @include text-style(14, $secondary);
+          margin-right: 12px;
+          font-weight: 700;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
     }
   }
 
