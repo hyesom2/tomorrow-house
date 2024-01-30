@@ -1,0 +1,85 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 32px 20px;
+  overflow-y: scroll;
+  background-color: $white;
+  border-right: 1px solid $border;
+
+  &-header {
+    .logo {
+      height: 20px;
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    height: 88px;
+  }
+
+  &-user {
+    @include flexbox(start);
+
+    a {
+      @include flexbox(start);
+      width: 100%;
+    }
+
+    .avatar-24 {
+      flex-grow: 0; // 사이즈 유지
+      flex-shrink: 0; // 사이즈 유지
+      margin-right: 8px;
+    }
+
+    .user-name {
+      @include text-style(14, $primary);
+      flex-grow: 1; // 나머지 빈공간 차지
+      width: 100%;
+      overflow: hidden;
+      font-weight: 700;
+      text-overflow: ellipsis; // text넘친것을 ... 으로 만들어줌
+      white-space: nowrap;
+    }
+  }
+
+  &-auth {
+    @include flexbox;
+
+    a {
+      width: 50%;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-user-menu {
+    margin-top: 16px;
+
+    &-item {
+      a {
+        @include inline-flexbox(start);
+        @include text-style(14, $primary);
+        width: 100%;
+        height: 36px;
+        padding: 0 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}
