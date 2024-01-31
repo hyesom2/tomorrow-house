@@ -1,0 +1,23 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $overlay-level;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($primary, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visible 300ms ease-in-out;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include responsive(md) {
+    display: none;
+  }
+}
