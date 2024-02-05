@@ -174,48 +174,6 @@
           </div>
         </div>
       </div>
-      <div class="lnb">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <nav class="lnb-wrapper">
-                <ul class="lnb-list">
-                  <li class="lnb-item is-active">
-                    <a href="#">스토어</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">홈카테고리</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">신혼가구</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">베스트</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">오늘의딜</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">연휴특가</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">월동준비</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">리퍼마켓</a>
-                  </li>
-                  <li class="lnb-item">
-                    <a href="#">
-                      기획전
-                      <i class="ic-new" aria-label="new"></i>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
     </header>
     <aside class="sidebar sm-only">
       <header class="sidebar-header">
@@ -370,6 +328,69 @@
         </div>
       </nav>
     </aside>
+    <!-- // sidebar -->
+
+    <aside class="search-modal lg-hide">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <header class="search-modal-header">
+              <h1 class="visually-hidden">검색창</h1>
+
+              <div class="search-modal-form">
+                <div class="input-group">
+                  <i class="ic-search" aria-hidden></i>
+                  <input
+                    class="form-input"
+                    type="text"
+                    placeholder="스토어 검색"
+                  />
+                </div>
+                <button class="button-ghost button-40" type="button">
+                  취소
+                </button>
+              </div>
+            </header>
+
+            <section class="search-modal-history">
+              <header class="search-modal-history-header">
+                <h2 class="title">최신검색어</h2>
+                <button type="button">전체 삭제</button>
+              </header>
+
+              <div class="search-modal-history-content">
+                <!-- // 최근 검색이 없는 경우-->
+                <!-- <p class="placeholder">최근 검색한 내역이 없습니다.</p> -->
+                <!-- // 최근 검색이 있는 경우 -->
+                <ol class="history-list">
+                  <li class="history-item">
+                    <button class="word-button" type="button">검색어1</button>
+                    <button class="delete-button" type="button">
+                      <i class="ic-close" aria-hidden></i>
+                    </button>
+                  </li>
+                  <li class="history-item">
+                    <button class="word-button" type="button">검색어2</button>
+                    <button class="delete-button" type="button">
+                      <i class="ic-close" aria-hidden></i>
+                    </button>
+                  </li>
+                  <li class="history-item">
+                    <button class="word-button" type="button">검색어3</button>
+                    <button class="delete-button" type="button">
+                      <i class="ic-close" aria-hidden></i>
+                    </button>
+                  </li>
+                </ol>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- // search-modal(sm, md) -->
+
     <div class="overlay" aria-hidden></div>
+    <!-- // overlay -->
   </body>
 </html>
