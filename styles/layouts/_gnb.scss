@@ -89,11 +89,35 @@ $gnb-height-md: 80px;
 
   @include responsive(lg) {
     &-search {
+      position: relative;
       width: 264px;
       margin-right: 24px;
+      border-radius: 4px;
 
       .input-group {
         width: 100%;
+      }
+
+      .search-modal-history {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        padding: 16px 8px 8px;
+        background-color: $white;
+        border: 1px solid $border;
+        box-shadow: $shadow-dropdown;
+
+        &-header {
+          padding: 0 8px;
+        }
+      }
+
+      &.is-active {
+        .search-modal-history {
+          display: block;
+        }
       }
     }
   }

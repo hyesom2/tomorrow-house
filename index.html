@@ -59,8 +59,8 @@
                 </div>
 
                 <div class="gnb-right">
-                  <div class="gnb-search">
-                    <div class="input-group lg-only">
+                  <div class="gnb-search lg-only">
+                    <div class="input-group">
                       <i class="ic-search" aria-hidden></i>
                       <input
                         class="form-input"
@@ -68,6 +68,41 @@
                         placeholder="스토어 검색"
                       />
                     </div>
+                    <section class="search-modal-history">
+                      <header class="search-modal-history-header">
+                        <h2 class="title">최신검색어</h2>
+                        <button type="button">전체 삭제</button>
+                      </header>
+
+                      <div class="search-modal-history-content">
+                        <ol class="history-list">
+                          <li class="history-item">
+                            <button class="word-button" type="button">
+                              검색어1
+                            </button>
+                            <button class="delete-button" type="button">
+                              <i class="ic-close" aria-hidden></i>
+                            </button>
+                          </li>
+                          <li class="history-item">
+                            <button class="word-button" type="button">
+                              검색어2
+                            </button>
+                            <button class="delete-button" type="button">
+                              <i class="ic-close" aria-hidden></i>
+                            </button>
+                          </li>
+                          <li class="history-item">
+                            <button class="word-button" type="button">
+                              검색어3
+                            </button>
+                            <button class="delete-button" type="button">
+                              <i class="ic-close" aria-hidden></i>
+                            </button>
+                          </li>
+                        </ol>
+                      </div>
+                    </section>
                   </div>
 
                   <!-- << 로그인 O >> -->
