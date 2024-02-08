@@ -1,0 +1,45 @@
+.lnb {
+  $lnb-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2; // 15
+  $lnb-height-sm: 40px;
+
+  overflow-x: auto;
+  background-color: $white;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    @include inline-flexbox(start);
+    height: $lnb-height-sm;
+    padding: 0 ($grid-margin - $lnb-padding);
+    margin-left: -#{$grid-margin};
+    white-space: nowrap;
+    border-bottom: 1px solid $border;
+  }
+
+  &-item {
+    &.is-active {
+      a {
+        color: $blue;
+        border-bottom-color: $blue;
+      }
+    }
+
+    a {
+      @include inline-flexbox;
+      @include text-style(13, $dark);
+      height: $lnb-height-sm;
+      padding: 0 $lnb-padding;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+    }
+
+    .ic-new {
+      color: $red;
+    }
+  }
+}
