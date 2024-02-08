@@ -2,6 +2,7 @@
   $lnb-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2; // 15
   $lnb-height-sm: 40px;
+  $lnb-height-md: 50px;
 
   overflow-x: auto;
   background-color: $white;
@@ -25,6 +26,12 @@
       }
     }
 
+    &:hover {
+      a {
+        color: $blue;
+      }
+    }
+
     a {
       @include inline-flexbox;
       @include text-style(13, $dark);
@@ -34,6 +41,28 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       border-bottom: 2px solid transparent;
+      transition: color 200ms ease-in-out;
+    }
+  }
+
+  @include responsive(md) {
+    height: $lnb-height-md;
+    overflow-x: visible;
+    border-bottom: 1px solid $border;
+
+    &-list {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin-left: 0;
+      border-bottom: 0;
+    }
+
+    &-item {
+      a {
+        @include text-style(14);
+        height: $lnb-height-md;
+      }
     }
   }
 }
