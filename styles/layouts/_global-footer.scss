@@ -1,0 +1,79 @@
+.global-footer {
+  padding: 32px 0 40px 0;
+  background-color: $background;
+
+  &-title {
+    @include flexbox(start);
+    @include text-style(13, $dark);
+    font-weight: 700;
+
+    .ic-chevron {
+      display: inline-block;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-tel {
+    @include text-style(24, $dark);
+    font-weight: 700;
+  }
+
+  &-time {
+    @include text-style(12, $primary);
+    font-weight: 400;
+  }
+
+  &-detail-list {
+    margin-top: 24px;
+  }
+
+  &-detail-item {
+    @include flexbox(start);
+
+    dt,
+    dd {
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      color: $secondary;
+    }
+
+    dt::after {
+      margin: 0 2px;
+      content: ':';
+    }
+  }
+
+  @include responsive(lg) {
+    &-title {
+      @include text-style(14);
+    }
+
+    &-tel {
+      display: inline-block;
+      margin-bottom: 2px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &-detail-list {
+      @include flexbox(start);
+    }
+
+    &-detail-item {
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:not(:last-child)::after {
+        width: 1px;
+        height: 10px;
+        margin: 0 4px;
+        background-color: $secondary;
+        content: '';
+      }
+    }
+  }
+}
