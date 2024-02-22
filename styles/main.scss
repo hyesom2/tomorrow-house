@@ -4,6 +4,7 @@
 @import './constants/breakpoints';
 @import './constants/box-shadows';
 @import './constants/z-index';
+@import './constants/grids';
 
 @import './base/fonts';
 @import './base/normalize';
@@ -30,6 +31,7 @@
 @import './components/drawer-menu';
 @import './components/search-modal-history';
 @import './components/breadcrumb';
+@import './components/product-carousel';
 
 @import './layouts/grids';
 @import './layouts/gnb';
