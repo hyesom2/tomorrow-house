@@ -73,3 +73,28 @@
     font-weight: 400;
   }
 }
+
+.price-sale-percentage {
+  @extend %price-base;
+  color: $blue;
+
+  .price,
+  .percent {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  @include responsive(md) {
+    @include flexbox(start, end);
+
+    .price {
+      font-size: 44px;
+      line-height: 36px;
+    }
+
+    .percent {
+      line-height: 20px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
-%rating-star-base {
+@mixin rating-star($size) {
   @include flexbox(start);
+  font-size: $size;
 
   .ic-star {
     color: $border;
@@ -10,22 +11,22 @@
   }
 }
 
-.rating-star-13 {
-  @extend %rating-star-base;
-  font-size: 13px;
-}
+// .rating-star-13 {
+//   @extend %rating-star-base;
+//   font-size: 13px;
+// }
 
-.rating-star-16 {
-  @extend %rating-star-base;
-  font-size: 16px;
-}
+// .rating-star-16 {
+//   @extend %rating-star-base;
+//   font-size: 16px;
+// }
 
-.rating-star-20 {
-  @extend %rating-star-base;
-  font-size: 20px;
-}
+// .rating-star-20 {
+//   @extend %rating-star-base;
+//   font-size: 20px;
+// }
 
-.rating-star-24 {
-  @extend %rating-star-base;
-  font-size: 24px;
-}
+// .rating-star-24 {
+//   @extend %rating-star-base;
+//   font-size: 24px;
+// }
