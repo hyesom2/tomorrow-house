@@ -30,10 +30,51 @@
     }
   }
 
+  &-price {
+    margin-bottom: 16px;
+
+    .info-price-original {
+      @include flexbox(start);
+    }
+
+    .info-price-sale {
+      @include flexbox(start);
+
+      .tag-red {
+        margin-left: 4px;
+      }
+    }
+
+    .info-price-point {
+      @include text-style(13, $secondary);
+      font-weight: 400;
+
+      strong {
+        @include text-style(13, $blue);
+        margin-right: 4px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-delivery {
+    padding-top: 12px;
+    border-top: 1px solid $border;
+
+    strong {
+      @include text-style(16, $primary);
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 400;
+    }
+  }
+
   @include responsive(md) {
     padding: 0;
 
     &-header {
+      margin-bottom: 20px;
+
       .info-brand {
         display: inline-block;
         margin-bottom: 8px;
@@ -49,6 +90,39 @@
           @include rating-star(16);
         }
       }
+    }
+
+    &-price {
+      &-wrapper {
+        @include flexbox(start, end);
+        margin-bottom: 12px;
+
+        .price-sale-percentage {
+          margin-right: 16px;
+        }
+
+        .info-price-sale {
+          .tag-red {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+
+    &-delivery {
+      padding: 16px 0 20px 0;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+
+      strong {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  @include responsive(lg) {
+    &-delivery {
+      margin-bottom: 20px;
     }
   }
 }
