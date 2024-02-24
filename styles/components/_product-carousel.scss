@@ -46,6 +46,8 @@
   }
 
   @include responsive(md) {
+    padding-right: 30px;
+
     &-slider {
       margin: 0 0 8px 0;
       overflow: hidden;
