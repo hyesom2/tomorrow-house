@@ -1,9 +1,7 @@
-$gnb-height-sm: 50px;
-$gnb-height-md: 80px;
-
 .gnb {
   @include flexbox;
   position: relative;
+  z-index: $gnb-level;
   height: 100%;
   background-color: $white;
   border-bottom: 1px solid $border;
