@@ -46,7 +46,7 @@
 
   @include responsive(md) {
     top: $gnb-height-md + $lnb-height-md;
-    height: $product-tab-level;
+    height: $product-tab-height-md;
     margin: 40px 0;
     background-color: $background;
 
@@ -57,7 +57,7 @@
     &-item {
       button {
         @include text-style(16);
-        height: $product-tab-level;
+        height: $product-tab-height-md;
       }
 
       .badge {
@@ -65,8 +65,5 @@
         margin-left: 8px;
       }
     }
-  }
-
-  @include responsive(lg) {
   }
 }
