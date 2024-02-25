@@ -5,6 +5,7 @@
 @import './constants/box-shadows';
 @import './constants/z-index';
 @import './constants/grids';
+@import './constants/dimensions';
 
 @import './base/fonts';
 @import './base/normalize';
@@ -43,3 +44,4 @@
 @import './layouts/sidebar';
 @import './layouts/search-modal';
 @import './layouts/overlay';
+@import './layouts/product-tab';
