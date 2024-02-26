@@ -5,11 +5,11 @@
   width: 100%;
   height: $product-tab-height-sm;
   background-color: $white;
-  border-bottom: 1px solid $border;
 
   &-list {
     @include flexbox(start);
     margin: 0 -#{$grid-margin};
+    border-bottom: 1px solid $border;
   }
 
   &-item {
