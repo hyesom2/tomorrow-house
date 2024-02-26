@@ -2,13 +2,12 @@
   @include flexbox;
   position: relative;
   z-index: $gnb-level;
-  height: 100%;
   background-color: $white;
   border-bottom: 1px solid $border;
 
   &-wrapper {
     @include flexbox(between);
-    height: $gnb-height-sm - 1px;
+    height: $gnb-height-sm;
   }
 
   &-left {
@@ -39,7 +38,7 @@
 
   @include responsive(md) {
     &-wrapper {
-      height: $gnb-height-md - 1px;
+      height: $gnb-height-md;
     }
 
     .logo {
@@ -97,10 +96,10 @@
       }
 
       .search-modal-history {
-        display: none;
         position: absolute;
         top: calc(100% + 8px);
         left: 0;
+        display: none;
         width: 100%;
         padding: 16px 8px 8px;
         background-color: $white;
