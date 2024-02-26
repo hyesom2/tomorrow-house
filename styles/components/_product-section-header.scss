@@ -15,11 +15,15 @@
     font-weight: 700;
   }
 
-  .icon-button.is-right {
+  .icon-button {
     @include inline-flexbox;
     @include position-center-y;
     right: 0;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%);
+
+    &.is-right {
+      transform: translateY(-50%) rotate(-90deg);
+    }
 
     i {
       @include flexbox;
@@ -28,5 +32,13 @@
       font-size: 22px;
       color: $secondary;
     }
+  }
+
+  .link {
+    @include text-style(14, $blue);
+    @include position-center-y;
+    right: 0;
+    font-weight: 700;
+    transform: translateY(-50%);
   }
 }
