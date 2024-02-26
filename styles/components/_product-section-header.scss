@@ -1,0 +1,32 @@
+.product-section-header {
+  @include flexbox(start);
+  position: relative;
+  height: 64px;
+  background-color: $white;
+
+  .title {
+    @include text-style(16, $dark);
+    margin-right: 8px;
+    font-weight: 700;
+  }
+
+  .badge {
+    @include text-style(16, $blue);
+    font-weight: 700;
+  }
+
+  .icon-button.is-right {
+    @include inline-flexbox;
+    @include position-center-y;
+    right: 0;
+    transform: translateY(-50%) rotate(-90deg);
+
+    i {
+      @include flexbox;
+      width: 22px;
+      height: 22px;
+      font-size: 22px;
+      color: $secondary;
+    }
+  }
+}
