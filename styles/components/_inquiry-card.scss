@@ -1,0 +1,122 @@
+.inquiry-card {
+  padding-bottom: 40px;
+
+  &-header {
+    @include text-style(12);
+    margin-bottom: 8px;
+
+    .detail,
+    .user-time-info {
+      @include flexbox(start);
+    }
+
+    .detail {
+      margin-bottom: 8px;
+      color: $primary;
+
+      dd {
+        &.is-answered {
+          color: $blue;
+        }
+
+        &:not(:last-child)::after {
+          display: inline-block;
+          width: 1px;
+          height: 12px;
+          margin: 0 4px;
+          vertical-align: middle;
+          background-color: $primary;
+          content: '';
+        }
+      }
+    }
+
+    .user-time-info {
+      color: $tertiary;
+
+      strong {
+        font-weight: 400;
+
+        &::after {
+          display: inline-block;
+          width: 1px;
+          height: 12px;
+          margin: 0 4px;
+          vertical-align: middle;
+          background-color: $tertiary;
+          content: '';
+        }
+      }
+    }
+  }
+
+  &-body {
+    .inquiry-content {
+      @include text-style(13);
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: 700;
+        color: $blue;
+      }
+
+      p {
+        @include flexbox(start);
+        font-weight: 400;
+        color: $primary;
+
+        i {
+          margin-right: 8px;
+          font-size: 16px;
+          color: $tertiary;
+        }
+      }
+
+      .seller {
+        @include flexbox(start);
+
+        strong {
+          @include text-style(13, $dark);
+          margin-right: 8px;
+          font-weight: 700;
+        }
+
+        time {
+          @include text-style(12, $tertiary);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @include responsive(md) {
+    &-header {
+      margin-bottom: 20px;
+    }
+
+    &-body {
+      .inquiry-content {
+        @include text-style(16);
+        padding-left: 24px;
+        margin-bottom: 16px;
+
+        .seller {
+          @include flexbox(start);
+
+          strong {
+            @include text-style(16);
+          }
+        }
+      }
+    }
+  }
+}

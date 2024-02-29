@@ -1,0 +1,40 @@
+.product-inquiry {
+  .product-section-content {
+    .inquiry-empty {
+      @include text-style(16, $secondary);
+      padding: 48px 0;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+  @include responsive(md) {
+    .product-section-content {
+      .inquiry-empty {
+        padding: 24px 0;
+      }
+    }
+  }
+
+  @include mobile-only() {
+    padding-bottom: 0;
+
+    .product-section-header .link,
+    .product-section-content {
+      display: none;
+    }
+
+    &.is-open {
+      padding-bottom: 20px;
+
+      .product-section-header .icon-button {
+        display: none;
+      }
+
+      .product-section-header .link,
+      .product-section-content {
+        display: block;
+      }
+    }
+  }
+}
